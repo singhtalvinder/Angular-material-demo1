@@ -9,8 +9,40 @@
   </div>
 </mat-toolbar>
 
+<!-- Side nave is done using 3-parts
+1. side name container
+2. side nav
+3. side nav content- represents the main content.
+  Note: Sidenav is always hidden by default. 
+  The simplest way to show it is to use the 'opened' 
+  attribute on the mat-side-nav.
+  But once opened it can't be brought back so it must be 
+  bind'ed to a property to manage it programmatically.
+  
+  also, mode for a sidenav can be specified using mode attrib.
+  default is over. others are push, side.
+  Other way to open /close sidenav is to invoke open/close methods
+  on the sidenav itself.Create a template ref variable there.
+  
+  Third way is to toggle the sidenav by calling the toggle method.
+
+-->
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)] = "opened">Sidenav</mat-sidenav>
+<mat-sidenav-content>Main 
+  <button (click)="opened= !opened" mat-raised-button color="accent">Toggle opened</button>
+  <button (click)="sidenav.open()" mat-raised-button color="warn">Open</button>
+  <button (click)="sidenav.close()" mat-raised-button color="warn">Close</button>
+  <button (click)="sidenav.toggle()" mat-raised-button color="Toggle">Toggle</button>
+</mat-sidenav-content>
+</mat-sidenav-container>
+<router-outlet></router-outlet>
+
+
 
 <!--
+
 <div>
   <p>using icon</p>
   <mat-icon color="primary">grade</mat-icon>
@@ -75,7 +107,6 @@
 
 
 -->
-<router-outlet></router-outlet>
 
 
 <!--

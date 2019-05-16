@@ -7,8 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'material-demo';
+
+  opened = false;
   notifications = 2;
   showSpinner = false;
+
+log(state) {
+  console.log(state);
+}
 
   loadData() {
     this.showSpinner = true;
