@@ -4,6 +4,9 @@ button {
 div {
     margin : 3rem;
 }
+.center {
+    margin: 5rem;
+}
 
 .navbar {
     justify-content: space-between;

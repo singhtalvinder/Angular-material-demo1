@@ -26,7 +26,7 @@
   
   Third way is to toggle the sidenav by calling the toggle method.
 
--->
+
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)] = "opened">Sidenav</mat-sidenav>
@@ -39,7 +39,63 @@
 </mat-sidenav-container>
 <router-outlet></router-outlet>
 
+-->
 
+<!-- 
+  By default mat-menu element doesn't render anything.
+  it has to be triggered from a ui element or programatically.
+  Position the menu using xPosition and yPosition.
+
+-->
+<mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
+  <button mat-menu-item [matMenuTriggerFor]="subMenuFE">Frontend</button>
+  <button mat-menu-item [matMenuTriggerFor]="subMenuBE">Backend</button>
+</mat-menu>
+<button class="center" mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+
+<!-- Create a sub menu for frontend menu item and associate these together-->
+<mat-menu #subMenuFE="matMenu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Vue</button>  
+</mat-menu>
+
+<!-- Create a sub menu for frontend menu item and associate these together-->
+<mat-menu #subMenuBE="matMenu">
+    <button mat-menu-item>Nodejs</button>
+    <button mat-menu-item>Java</button>
+    <button mat-menu-item>C#</button>  
+</mat-menu>
+<!--Dynamic menu-->
+<mat-menu #dynamicMenu="matMenu">
+  <ng-template matMenuContent let-name="name" let-hobby="hobby">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Hobby is : {{hobby}}</button>
+    <button mat-menu-item>Log-out{{name}}</button>
+    
+  </ng-template>
+</mat-menu>
+
+<button mat-raised-button [matMenuTriggerData]="{ name:' User1', hobby: 'soccer'}" [matMenuTriggerFor]="dynamicMenu">Dyn menu </button>
+<button mat-raised-button [matMenuTriggerData]="{ name:' User2', hobby: 'tennis'}" [matMenuTriggerFor]="dynamicMenu">Dyn menu2</button>
+
+<mat-menu #iconMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check Voicemail</span>
+  </button>
+  <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+</mat-menu>
+<button mat-icon-button [matMenuTriggerFor]="iconMenu">
+  <mat-icon>more_vert</mat-icon>
+</button>
 
 <!--
 
