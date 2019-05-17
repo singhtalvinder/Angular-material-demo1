@@ -15,6 +15,9 @@ export class AppComponent {
 log(state) {
   console.log(state);
 }
+logChange(index) {
+  console.log('selected index of tab is :'+ index)
+}
 
   loadData() {
     this.showSpinner = true;
