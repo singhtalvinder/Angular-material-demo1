@@ -39,3 +39,12 @@ mat-grid-tile {
     background-image: url("http://canadiansikhheritage.ca/wp-content/uploads/2017/10/KDS_logo_mobile.png");
     background-size: cover;
 }
+
+.sample-form {
+    min-width: 150px;
+    max-width: 500px;
+}
+
+.sample-full-width {
+    width: 100%;
+}
