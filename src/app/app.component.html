@@ -9,6 +9,76 @@
   </div>
 </mat-toolbar>
 -->
+<!--Radio and Check box-->
+<mat-checkbox>
+  Consider
+</mat-checkbox>
+<p></p>
+
+<mat-checkbox labelPosition="before" color="primary">
+    Subscribe
+</mat-checkbox>
+<p></p>
+<mat-checkbox labelPosition="before" color="warn">
+      Leave
+</mat-checkbox>
+
+<p>Select your favourite vehicle:
+<mat-radio-group [(ngModel)]='favouriteCar'>
+  <mat-radio-button 
+          *ngFor="let car of carOptions" 
+          [value]=car 
+          color="primary">
+          {{car}}
+  </mat-radio-button>
+</mat-radio-group>
+<br>
+You selected: {{favouriteCar}}
+</p>
+
+<p></p>
+<!--Select with Auto complete-->
+<form>
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete] ="auto"  [formControl]="myControl"/>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+<!-- Select with multiple selections-->
+<mat-form-field>
+    <mat-label>Topic</mat-label>
+    <mat-select [(value)]="selectedValue" multiple>
+      <mat-option>None</mat-option>
+      <mat-optgroup label="web">
+      <mat-option value="angular">Angular</mat-option>
+      <mat-option value="react">React</mat-option>
+      <mat-option value="vue">Vue</mat-option>
+    </mat-optgroup>
+    <mat-optgroup label="Application">
+      <mat-option value="c++">C++</mat-option>
+      <mat-option value="java">Java</mat-option>
+    </mat-optgroup>
+    </mat-select>
+  </mat-form-field>
+  <p>THe user seleted option(s) are:  {{selectedValue}} </p>
+<!-- <mat-form-field>
+  <mat-label>Topic</mat-label>
+  <mat-select [(value)]="selectedValue">
+    <mat-option>None</mat-option>
+    <mat-option value="angular">Angular</mat-option>
+    <mat-option value="react">React</mat-option>
+    <mat-option value="vue">Vue</mat-option>
+  </mat-select>
+</mat-form-field>
+{{selectedValue}} -->
+<p>
+  _________________________
+</p>
+
 <!--form field for input-->
 <form class="sample-form">
 <mat-form-field floatLabel="never" appearance="fill" color="accent">
