@@ -9,7 +9,33 @@
   </div>
 </mat-toolbar>
 -->
+<!--Snackbar that opens at the bottom of the page -->
+<button mat-button (click)="openSnackBar('Item deleted','Undo')">Delete</button>
+
+
+
+<!--Date picker, default is month view, can change it as below-->
+<!--<mat-datepicker #myDatePicker startView="multi-year"></mat-datepicker>-->
+
+<!-- Min max : used to allow selection on dates between a min and max date.-->
+<!-- <div>
+  <mat-form-field>
+    <input matInput [matDatepicker]="myDatePicker" [min]="minDate" [max]="maxDate">
+    <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #myDatePicker ></mat-datepicker>
+  </mat-form-field>
+</div> -->
+<!-- Filter out some days : here we filter out sundays and saturdays-->
+<div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="myDatePicker" [matDatepickerFilter]="dateFilter">
+      <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+      <mat-datepicker #myDatePicker ></mat-datepicker>
+    </mat-form-field>
+  </div>
+
 <!--Radio and Check box-->
+<!--
 <mat-checkbox>
   Consider
 </mat-checkbox>
@@ -37,6 +63,7 @@ You selected: {{favouriteCar}}
 </p>
 
 <p></p>
+-->
 <!--Select with Auto complete-->
 <form>
   <mat-form-field>
@@ -80,6 +107,7 @@ You selected: {{favouriteCar}}
 </p>
 
 <!--form field for input-->
+<!--
 <form class="sample-form">
 <mat-form-field floatLabel="never" appearance="fill" color="accent">
   <mat-label>Name</mat-label>
@@ -98,6 +126,7 @@ You selected: {{favouriteCar}}
   <mat-hint>Min 8 chars</mat-hint>
 </mat-form-field>
 
+-->
 
 <!--Steppers-->
 <!--

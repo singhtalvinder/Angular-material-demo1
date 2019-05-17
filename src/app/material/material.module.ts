@@ -19,7 +19,10 @@ import { MatButtonModule,
   MatSelectModule,
   MatAutocompleteModule,
   MatCheckboxModule,
-  MatRadioModule
+  MatRadioModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatSnackBarModule
  } from '@angular/material';
 
 import { MatBadgeModule } from '@angular/material/badge';
@@ -45,7 +48,10 @@ const material = [
   MatSelectModule,
   MatAutocompleteModule,
   MatCheckboxModule,
-  MatRadioModule
+  MatRadioModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatSnackBarModule
 ];
 
 @NgModule({
