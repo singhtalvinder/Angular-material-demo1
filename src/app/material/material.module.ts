@@ -22,7 +22,8 @@ import { MatButtonModule,
   MatRadioModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatDialogModule
  } from '@angular/material';
 
 import { MatBadgeModule } from '@angular/material/badge';
@@ -51,7 +52,8 @@ const material = [
   MatRadioModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatDialogModule
 ];
 
 @NgModule({

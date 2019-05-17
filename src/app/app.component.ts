@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable} from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatDialog } from '@angular/material';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,7 @@ export class AppComponent implements OnInit{
   favouriteCar: string;
   carOptions = ['honda', 'nissan', 'hyundai'];
 
-  constructor(private snackbar: MatSnackBar) {
+  constructor(private snackbar: MatSnackBar, public mydialog: MatDialog) {
 
   }
 
@@ -76,6 +77,14 @@ loadData() {
 
     snackBarRef.onAction().subscribe(() =>{
       console.log('snackbar action was triggered.');
+    });
+  }
+
+  openDialog() {
+    let mydialogref= this.mydialog.open(DialogExampleComponent, {data: {name:'Singh'}});
+    mydialogref.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}` );
+      // handle result as needed. what to do on success and failure.
     });
   }
 
