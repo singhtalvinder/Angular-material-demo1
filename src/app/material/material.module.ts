@@ -6,7 +6,11 @@ import { MatButtonModule,
   MatProgressSpinnerModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatMenuModule } from '@angular/material';
+  MatMenuModule,
+  MatListModule,
+  MatDividerModule,
+  MatGridListModule
+ } from '@angular/material';
 
 import { MatBadgeModule } from '@angular/material/badge';
 
@@ -18,7 +22,10 @@ const material = [
   MatProgressSpinnerModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatMenuModule
+  MatMenuModule,
+  MatListModule,
+  MatDividerModule,
+  MatGridListModule
 ];
 
 @NgModule({

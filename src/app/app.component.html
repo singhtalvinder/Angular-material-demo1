@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
+<!--
 <mat-toolbar color="primary" class="navbar">
   <div>Material Toolbar</div>
   <div>
@@ -8,7 +8,51 @@
     <span>Services</span>
   </div>
 </mat-toolbar>
+-->
 
+
+<mat-list>
+  <mat-list-item>
+    <mat-icon matListIcon>home</mat-icon>
+    <h3 matLine>Heading</h3>
+    <p matLine>Line</p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>
+      <mat-icon matListIcon>folder</mat-icon>
+      <h3 matLine>Heading2</h3>
+      <p matLine>Line2</p>
+    </mat-list-item>
+</mat-list>
+
+
+<!--<mat-grid-list cols="2" rowHeight ="2:1">    <mat-grid-list cols="2" rowHeight ="100px"> -->
+<mat-grid-list cols="2" rowHeight ="fit" style="height: 200px" gutterSize="10px">      
+  <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile>
+  <mat-grid-tile>Tile 2</mat-grid-tile>
+  <mat-grid-tile colspan="2">Tile 3</mat-grid-tile>
+  <mat-grid-tile>Tile 4</mat-grid-tile>
+  <mat-grid-tile>Tile 5</mat-grid-tile>
+  <mat-grid-tile>Tile 6</mat-grid-tile>
+</mat-grid-list>
+
+
+<!--
+<mat-list dense>
+  <mat-list-item>Item1</mat-list-item>
+  <mat-list-item>Item2</mat-list-item>
+  <mat-list-item>Item3</mat-list-item>
+  <mat-list-item>Item4</mat-list-item>
+</mat-list>
+
+<mat-nav-list>
+  <a mat-list-item href='#'>Home</a>
+  <a mat-list-item href='#'>About</a>
+  <a mat-list-item href='#'>Services</a>
+</mat-nav-list>
+-->
+
+<!--=================================================-->
 <!-- Side nave is done using 3-parts
 1. side name container
 2. side nav
