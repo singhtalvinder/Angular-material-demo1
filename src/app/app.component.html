@@ -9,7 +9,69 @@
   </div>
 </mat-toolbar>
 -->
+<!-- Cards-->
+<mat-card>
+  <mat-card-title>Card title</mat-card-title>
+  <mat-card-content>The card content.</mat-card-content>
+  <mat-card-actions  align="end">
+    <button mat-flat-button>Login</button>
+  </mat-card-actions>
+</mat-card>
 
+<mat-card class="sample-card">
+  <mat-card-header>
+    <div mat-card-avatar class="sample-header-image"></div>
+    <mat-card-title>Sample card 2</mat-card-title>
+    <mat-card-subtitle>My try with cards ....</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="http://canadiansikhheritage.ca/wp-content/uploads/2017/10/KDS_logo_mobile.png" alt="Khalsa picture">
+  <mat-card-content>
+    <p>
+        Khalsa (Punjabi: ਖ਼ਾਲਸਾ, [ˈxaːlsaː], "the sovereign") refers to both a special group of initiated Sikhs,<br> 
+        as well as a community that considers Sikhism as its faith. The Khalsa tradition was initiated in 1699 <br>
+        by the last living Guru of Sikhism, Guru Gobind Singh. Its formation was a key event in the history of<br>
+        Sikhism.(src: wikipedia)
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Like</button>
+    <button mat-button>Share</button>
+  </mat-card-actions>
+</mat-card>
+
+
+<!--Accordion and expansion panels-->
+<!--
+<mat-accordion>
+  <mat-expansion-panel>
+<mat-expansion-panel-header>
+  <mat-panel-title>
+    Expansion panel ...    
+  </mat-panel-title>
+  <mat-panel-description>
+    Learn on your own !! 
+  </mat-panel-description>
+</mat-expansion-panel-header>
+<p>This is the panel content. Will be the main content ....</p>
+<mat-action-row>
+  <button mat-button>Enroll</button>
+</mat-action-row>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Expansion panel: slot 2 ...    
+      </mat-panel-title>
+      <mat-panel-description>
+        This is called Accordian. 
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Basically grouping multiple expansion panels together..</p>
+  <mat-action-row>
+    <button mat-button>Get it </button>
+  </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
 
 <mat-list>
   <mat-list-item>
@@ -24,10 +86,11 @@
       <p matLine>Line2</p>
     </mat-list-item>
 </mat-list>
-
+-->
 
 <!--<mat-grid-list cols="2" rowHeight ="2:1">    <mat-grid-list cols="2" rowHeight ="100px"> -->
-<mat-grid-list cols="2" rowHeight ="fit" style="height: 200px" gutterSize="10px">      
+<!--
+  <mat-grid-list cols="2" rowHeight ="fit" style="height: 200px" gutterSize="10px">      
   <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile>
   <mat-grid-tile>Tile 2</mat-grid-tile>
   <mat-grid-tile colspan="2">Tile 3</mat-grid-tile>
@@ -35,7 +98,7 @@
   <mat-grid-tile>Tile 5</mat-grid-tile>
   <mat-grid-tile>Tile 6</mat-grid-tile>
 </mat-grid-list>
-
+-->
 
 <!--
 <mat-list dense>

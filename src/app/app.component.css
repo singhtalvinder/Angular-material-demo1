@@ -31,3 +31,11 @@ mat-sidenav {
 mat-grid-tile {
     background-color: lightgray;
 }
+
+.sample-card {
+    max-width: 400px;
+}
+.sample-header-image {
+    background-image: url("http://canadiansikhheritage.ca/wp-content/uploads/2017/10/KDS_logo_mobile.png");
+    background-size: cover;
+}
